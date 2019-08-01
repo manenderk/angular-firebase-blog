@@ -41,4 +41,20 @@ export class PostService {
     return this.postDoc.valueChanges();
   }
 
+  getPost(id: string) {
+    return this.afs.collection('posts').doc<Post>('posts/' + id);    
+  }
+
+  create(data: Post){
+    this.postsCollection.add(data);
+  }
+  
+  delete(id: string){
+    return this.getPost(id).delete();
+  }
+
+  update(id: string, data: Post){
+    return this.getPost(id).update(data);
+  }
+
 }

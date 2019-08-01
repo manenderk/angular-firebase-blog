@@ -1,3 +1,5 @@
-<h2> {{this.post.title}} </h2>
-<p> {{this.post.content}} </p>
-<p> {{this.post.published.toDate() | date: 'yyyy-MM-dd'}}</p>
+<div *ngIf="post">
+    <h3> {{post.title}} </h3>
+    <p> Posted By {{post.author}} &bull; {{post.published.toDate() | date}}</p>
+    <p> {{post.content}} </p>
+</div>
