@@ -5,3 +5,11 @@
 .the-spacer {
   flex: 1 1 auto;
 }
+
+.navbar-brand:focus{
+  outline: none;
+}
+
+.navbar-brand{
+  cursor: pointer;
+}
