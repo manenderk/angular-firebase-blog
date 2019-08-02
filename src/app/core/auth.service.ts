@@ -21,6 +21,8 @@ export class AuthService {
     return this.authenticated ? this.authState.uid : null;
   }
 
+  
+
   login(){
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }

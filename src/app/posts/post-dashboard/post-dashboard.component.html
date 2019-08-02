@@ -1,1 +1,30 @@
-<p>post-dashboard works!</p>
+<section>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Create new post
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+				<input type="file" name="file" id="file" (change)="uploadImage($event)">
+				<div [hidden]="!uploadPercent">
+					<mat-progress-bar mode="determinate" value="{{ uploadPercent | async}}"></mat-progress-bar>
+				</div>
+				<div>
+					<img [src]="downloadURL | async" [hidden]="!downloadURL">
+				</div>
+      </div>
+      <mat-form-field>
+        <input matInput placeholder="Post Title" [(ngModel)]="title">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <textarea matInput placeholder="Post Content" [(ngModel)]="content" rows="15"></textarea>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" (click)="createPost()"
+        [disabled]="!title || !content">{{buttonText}}</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
