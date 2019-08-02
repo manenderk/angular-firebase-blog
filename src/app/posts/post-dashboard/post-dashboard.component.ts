@@ -61,8 +61,7 @@ export class PostDashboardComponent implements OnInit {
       this.uploadPercent = task.percentageChanges();
       task.snapshotChanges().pipe(
         finalize( () => {
-          this.downloadURL = fileRef.getDownloadURL()
-          console.log(this.downloadURL);
+          fileRef.getDownloadURL().subscribe(data => this.image = data)
         })
       ).subscribe();
      

@@ -1,0 +1,9 @@
+img {
+  width: 100%;
+}
+
+mat-card {
+  margin: 10px auto;
+  max-width: 768px;
+}
+

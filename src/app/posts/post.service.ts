@@ -42,7 +42,7 @@ export class PostService {
   }
 
   getPost(id: string) {
-    return this.afs.collection('posts').doc<Post>('posts/' + id);    
+    return this.afs.collection('posts').doc<Post>(id);    
   }
 
   create(data: Post){

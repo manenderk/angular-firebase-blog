@@ -5,7 +5,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 
@@ -18,7 +20,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatIconModule,
     MatExpansionModule,
     MatInputModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatCardModule
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +29,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatIconModule,
     MatExpansionModule,
     MatInputModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }
