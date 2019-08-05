@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 #environment to protect keys
-src/environment/*
+src/environment
